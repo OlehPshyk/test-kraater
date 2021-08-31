@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - node
+  - lts/*
+install:
+  - yarn
+script:
+  # - npm run lint:styles
+  # - npm run lint:js
+  # - npm run lint:html
+  - yarn build
+deploy:
+  provider: pages  
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  local_dir: build
+  on:
+    branch: master
+    node: 'lts/*'
