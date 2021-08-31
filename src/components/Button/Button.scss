@@ -1,0 +1,45 @@
+@import "src/assets/common";
+.Button{
+  @include outline(0);
+}
+
+.tab-btn{
+  position: relative;
+  min-height: 47px;
+  padding: 5px 28px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #F5F5FA;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.25), -10px -10px 20px #FFFFFF;
+  border-radius: 12px;
+  font-family: $font-base;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.3;  
+  color: #7878AB;
+  transition: background-color ease-in-out .6s;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover,&:active,&.active{
+    background-color: #E5E5F0;    
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;    
+    background-color: transparent;
+    transition: background-color ease-in-out .6s;    
+  }
+  &.active:before{
+    background-color: rgba(#FEC81E, 0.5);
+  }
+  @include breakpoint(xl){
+    padding: 5px 28px;
+    min-height: 32px;
+  }  
+}
