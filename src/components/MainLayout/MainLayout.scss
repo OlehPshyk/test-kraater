@@ -13,7 +13,7 @@
     @include breakpoint(xl){
       display: flex;
       max-width: 1170px;
-      margin: 0 auto 10px;
+      margin: 0 auto 16px;
     }
   }
   .logo-container{
@@ -59,11 +59,14 @@
   .tab-content{
     @include breakpoint(lg-down){
       flex: 1 1 auto;
-    }
-    padding: 20px 15px;
+      padding: 32px 15px;
+    }    
     background: rgba(255, 254, 241, 0.8);  
     @include breakpoint(xl){ 
-      min-height: 330px;
+      padding: 32px 24px;
+      position: relative;
+      z-index: 5;
+      min-height: 360px;
       max-width: 1170px;
       margin: 0 auto;
       box-shadow: 5px 5px 8px rgba(170, 170, 204, 0.25), 10px 10px 10px rgba(170, 170, 204, 0.25);
@@ -84,7 +87,7 @@
   .texts-container{ 
     .text-item{
       text-indent: 1em;
-      line-height: 1.5;
+      line-height: 1.7;
     }   
     &.v1{
       .text-item{
